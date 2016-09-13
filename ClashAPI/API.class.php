@@ -1,5 +1,6 @@
 <?php
 
+require_once "Config.class.php";
 require_once "League.class.php";
 require_once "Location.class.php";
 require_once "Clan.class.php";
@@ -13,7 +14,8 @@ require_once "LogEntry.class.php";
 
 class ClashOfClans
 {
-	private $_apiKey = "Change_This_To_Your_Token";
+	$config = new config();
+	private $_apiKey = $config->getApiKey();
 	
 	/**
 	 * Send a Request to SuperCell's Servers and contains the authorization-Token.
