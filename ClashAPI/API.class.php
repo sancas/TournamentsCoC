@@ -14,8 +14,7 @@ require_once "LogEntry.class.php";
 
 class ClashOfClans
 {
-	$config = new config();
-	private $_apiKey = $config->getApiKey();
+	private $_apiKey = config::_apikey;
 	
 	/**
 	 * Send a Request to SuperCell's Servers and contains the authorization-Token.
